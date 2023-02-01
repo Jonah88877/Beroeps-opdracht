@@ -1,120 +1,137 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="quiz.js"></script>
     <link rel="stylesheet" href="quizgta.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>GTA V Quiz</title>
   </head>
   <body>
+  <img src="imgs/achtergrondv1000.jpg" class="image2" id="image2">
+    <img src="imgs/pc.png" class="image" id="image">
     <h1>Grand Theft Auto V Quiz</h1>
-    <div class="question">
+    <div class="questions">
       <ol>
-        <li class="question" id="q1">
+        <ul class="question" id="q1">
           Welk jaar was GTA 5 gereleased? 
           <ul class="answers">
-            <li onclick="fout()"> a) 2010</li>
-            <li onclick="fout()"> b) 2012</li>
-            <li onclick="goed()"> c) 2013</li>
-            <li onclick="fout()"> d) 2014</li>
+            <li><input type="radio" name="question1" value="a">a) 2010</li>
+            <li><input type="radio" name="question1" value="b">b) 2012</li>
+            <li><input type="radio" name="question1" value="c">c) 2013</li>
+            <li><input type="radio" name="question1" value="d">d) 2014</li>
           </ul>
-        </li>
-        <li class="question" id="q2">
+          <button type="button" onclick="showNextQuestion(2)">Volgende</button>
+        </ul>
+        <ul class="question" id="q2" style="display:none">
           Waar speelt de game zich af?
           <ul class="answers">
-            <li onclick="fout()">a) Liberty City</li>
-            <li onclick="fout()">b) Vice City</li>
-            <li onclick="goed()">c) Los Santos</li>
-            <li onclick="fout()">d) San Fierro</li>
+            <li><input type="radio" name="question2" value="a">a) Liberty City</li>
+            <li><input type="radio" name="question2" value="b">b) Vice City</li>
+            <li><input type="radio" name="question2" value="c">c) Los Santos</li>
+            <li><input type="radio" name="question2" value="d">d) San Fierro</li>
           </ul>
-        </li>
-         <li class="question">
-          Hoeveel hoofdkarakters zijn er in GTA 5?
+          <button type="button" onclick="showNextQuestion(3)">Volgende</button>
+        </ul>
+         <ul class="question" id="q3" style="display:none">
+          Hoeveel hoofdkarakters zijn er<br> in GTA 5?
           <ul class="answers">
-            <li onclick="fout()">a) 1</li>
-            <li onclick="fout()">b) 2</li>
-            <li>c) 3</li>
-            <li onclick="fout()">d) 4</li>
+            <li><input type="radio" name="question3" value="a">a) 1</li>
+            <li><input type="radio" name="question3" value="b">b) 2</li>
+            <li><input type="radio" name="question3" value="c">c) 3</li>
+            <li><input type="radio" name="question3" value="d">d) 4</li>
           </ul>
-        </li>
-        <li class="question">
+           <button type="button" onclick="showNextQuestion(4)">Volgende</button>
+        </ul>
+        <ul class="question" id="q4" style="display:none">
           Welke genre is GTA 5?
           <ul class="answers">
-            <li>a) Action-adventure</li>
-            <li onclick="fout()">b) RPG</li>
-            <li onclick="fout()">c) Racing</li>
-            <li onclick="fout()">d) Sports</li>
+            <li><input type="radio" name="question4" value="a">a) Open-World en Sandbox</li>
+            <li><input type="radio" name="question4" value="b">b) MMORPG</li>
+            <li><input type="radio" name="question4" value="c">c) Racing</li>
+            <li><input type="radio" name="question4" value="d">d) Action en Adventure</li>
           </ul>
-        </li>
-        <li class="question">
+          <button type="button" onclick="showNextQuestion(5)">Volgende</button>
+        </ul>
+        <ul class="question" id="q5" style="display:none">
           Welk bedrijf heeft GTA 5 gemaakt?
           <ul class="answers">
-            <li>a) Rockstar North</li>
-            <li onclick="fout()">b) Ubisoft</li>
-            <li onclick="fout()">c) EA Games</li>
-            <li onclick="fout()">d) Activision</li>
+            <li><input type="radio" name="question5" value="a">a) Rockstar Games</li>
+            <li><input type="radio" name="question5" value="b">b) Ubisoft</li>
+            <li><input type="radio" name="question5" value="c">c) EA Games</li>
+            <li><input type="radio" name="question5" value="d">d) Activision</li>
           </ul>
-        </li>
-        <li class="question">
-          Wat is de naam van de eerste karakter die je kan spelen?
+          <button type="button" onclick="showNextQuestion(6)">Volgende</button>
+        </ul>
+        <ul class="question" id="q6" style="display:none">
+          Wat is de naam van de eerste karakter<br> die je kan spelen?
           <ul class="answers">
-            <li onclick="fout()">a) Franklin Clinton</li>
-            <li>b) Michael De Santa</li>
-            <li onclick="fout()">c) Trevor Philips</li>
-            <li onclick="fout()">d) Tommy Vercetti</li>
+            <li><input type="radio" name="question6" value="a">a) Franklin Clinton</li>
+            <li><input type="radio" name="question6" value="b">b) Michael De Santa</li>
+            <li><input type="radio" name="question6" value="c">c) Trevor Philips</li>
+            <li><input type="radio" name="question6" value="d">d) Tommy Vercetti</li>
           </ul>
-          </li>
-        <li class="question">
-          Nieuwe vraag bedenken
+          <button type="button" onclick="showNextQuestion(7)">Volgende</button>
+          </ul>
+        <ul class="question" id="q7" style="display:none">
+          Welke heist doe je als eerste<br> in gta 5 online?
           <ul class="answers">
-            <li>a) Los Santos</li>
-            <li>b) Liberty City</li>
-            <li>c) San Fierro</li>
-            <li>d) Vice City</li>
+            <li><input type="radio" name="question7" value="a">a) Cayo Perico</li>
+            <li><input type="radio" name="question7" value="b">b) The Fleeca Job</li>
+            <li><input type="radio" name="question7" value="c">c) Doomsday Heist</li>
+            <li><input type="radio" name="question7" value="d">d) The Diamond Casino Heist</li>
           </ul>
-        </li>
-        <li class="question">
+          <button type="button" onclick="showNextQuestion(8)">Volgende</button>
+        </ul>
+        <ul class="question" id="q8" style="display:none">
           Hoe heet de straatrace gang in GTA 5?
           <ul class="answers">
-            <li>a) The Lost MC</li>
-            <li>b) The Ballas</li>
-            <li>c) The Grove Street Families</li>
-            <li>d) The Families</li>
+            <li><input type="radio" name="question8" value="a">a) The Lost MC</li>
+            <li><input type="radio" name="question8" value="b">b) The Ballas</li>
+            <li><input type="radio" name="question8" value="c">c) The Grove Street Families</li>
+            <li><input type="radio" name="question8" value="d">d) The Families</li>
           </ul>
-        </li>
-        <li class="question">
-          Hoe heet de radio die klassieke rock muziek afspeelt?
+          <button type="button" onclick="showNextQuestion(9)">Volgende</button>
+        </ul>
+        <ul class="question" id="q9" style="display:none">
+          Wat is de meest afgespeelde radio<br> op GTA 5 online?
           <ul class="answers">
-            <li>a) Los Santos Rock Radio</li>
-            <li>b) Non-Stop-Pop FM</li>
-            <li>c) Radio Los Santos</li>
-            <li>d) Vinewood Boulevard Radio</li>
+            <li><input type="radio" name="question9" value="a">a) Channel X</li>
+            <li><input type="radio" name="question9" value="b">b) Non-Stop-Pop FM</li>
+            <li><input type="radio" name="question9" value="c">c) West Coast Classic</li>
+            <li><input type="radio" name="question9" value="d">d) Radio Los Santos</li>
           </ul>
-        </li>
-        <li class="question">
+          <button type="button" onclick="showNextQuestion(10)">Volgende</button>
+        </ul>
+        <ul class="question" id="q10" style="display:none">
           Hoe heet de casino in GTA 5?
           <ul class="answers">
-            <li>a) The Vinewood</li>
-            <li>b) The Diamond Casino & Resort</li>
-            <li>c) The Royal</li>
-            <li>d) The Lucky Wheel</li>
+            <li><input type="radio" name="question10" value="a"> a) The Vinewood</li>
+            <li><input type="radio" name="question10" value="b"> b) The Lucky Wheel</li>
+            <li><input type="radio" name="question10" value="c"> c)  The Diamond Casino & Resort</li>
+            <li><input type="radio" name="question10" value="d"> d) The Royal</li>
           </ul>
+          <button type="button" onclick="showNextQuestion(11)">Volgende</button>
+        </ul>
+      </ol>
+      <ol>
+        <li class="question" id="q11" style="display:none">Welke heist kwam op<br> 12 december 2019 uit?<br>
+          <input type="text" name="ov" id="question11" class="ov">
+          <button type="button" onclick="showNextQuestion(12)">Volgende</button></li>
+        <li class="question" id="q12" style="display:none">GTA 5 bestaat al een aantal jaren,<br> hoeveel jaren?<br>
+          <input type="text" name="ov" id="question12" class="ov">
+          <button type="button" onclick="showNextQuestion(13)">Volgende</button></li>
+        <li class="question" id="q13" style="display:none">Welke auto steelt Franklin<br> in de tweede missie van de game<br>
+          <input type="text" name="ov" id="question13" class="ov">
+          <button type="button" onclick="showNextQuestion(14)">Volgende</button></li>
+        <li class="question" id="q14" style="display:none">Wie was de rechterhand<br> van Steve Haines<br>
+        <input type="text" name="ov" id="question14" class="ov">
+          <button type="button" onclick="showNextQuestion(15)">Volgende</button></li>
+        <li class="question" id="q15" style="display:none">Wat is de maximale aantal geld<br> dat je kan krijgen door te traden<br>
+        <input type="text" name="ov" id="question15" class="ov">
+          <button onclick="myFunction()" id="button">Invoeren</button>
         </li>
       </ol>
-      <h2>Open Vragen:</h2>
-      <ol>
-        <li class="question">Welke heist kwam op 12 december 2019 uit?</li>
-        <input type="text" name="ov1" id=ov1 class="ov">
-        <li class="question">GTA 5 bestaat al een aantal jaren, hoeveel jaren?</li>
-        <input type="text" name="ov2" id=ov3 class="ov">
-        <li class="question">Wat maakt GTA 5 anders dan alle andere games van deze tijd?</li>
-        <input type="text" name="ov3" id=ov4 class="ov">
-        <li class="question">Wat is het verschil tussen de open-world van GTA en de open-world van andere games?</li>
-        <input type="text" name="ov4" id=ov4 class="ov">
-        <li class="question">Wat vind jij van alle illegale dingen die je kan doen in GTA?</li>
-        <input type="text" name="ov5" id=ov5 class="ov">
-      </ol>
-      </div>
-      <button id="button"></button>
+     </div>
+    <script src="quiz.js"></script>
       </body>
     </html>
     

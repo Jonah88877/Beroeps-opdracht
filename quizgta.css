@@ -3,13 +3,9 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-
-h1, h2 {
-    text-align: center;
+    font-family: 'Press Start 2P', cursive;
   }
 
 h1 {
@@ -18,74 +14,95 @@ h1 {
 
 .question {
     padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
+    top: 1em;
   }
 
 .answers {
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
   }
 
-.answers li {
-    margin-bottom: 10px;
-  }
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-  
 h1, h2 {
     text-align: center;
     margin: 30px 0;
+    color: white;
   }
-  
-.question {
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-.answers {
-    list-style-type: none;
-    padding: 0;
-  }
-  
+
+
 .answers li {
     margin-bottom: 10px;
     font-size: 18px;
   }
-  
+
 input[type="radio"] {
     margin-right: 10px;
   }
-  
+
   .answers li:hover {
-    background-color: #e2e2e2;
+    background-color: #505050;
     cursor: pointer;
   }
-  
+
 
 #button {
     display: block;
-    width: 150px;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
+    position: relative;
+    width: 70px;
+    height: 25px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: solid 1px #e8e8e8;
+    border-radius: 8px;
+    font-size: 15px;
   }
 
 #button:hover {
-    background-color: #3e8e41;
+    background-color: #ffffff;
     transform: scale(1.05);
-  }
-  
+    border: solid 1px #e8e8e8;
+}
+
+.image {
+    position: absolute;
+    height: 70vw;
+    width: 100vw;
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+}
+
+.image2 {
+    position: absolute;
+    height: 70vw;
+    width: 100vw;
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+}
+
+.questions {
+    position: absolute;
+    left: 27vw;
+    top: 12vw;
+    width: 46vw;
+    color: white;
+    overflow: hidden;
+    border-right: .15em solid transparent;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+            typing 3.5s steps(30, end),
+            blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 46% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: transparent }
+}
